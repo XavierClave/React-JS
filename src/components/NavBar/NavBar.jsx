@@ -1,12 +1,21 @@
 import React from 'react'
 import { Navbar, Container, Offcanvas, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
         <div>
-        <Navbar bg="light" expand={false}>
+        <Navbar bg="secondary" expand={false}>
   <Container fluid>
-    <Navbar.Brand href="#">Logo</Navbar.Brand>
+    <Navbar.Brand href="#">
+    <img 
+    src='./assets/img/LogoWeb.png'
+    width="40"
+    height="40"
+    className="d-inline-block aling-top"
+    alt="Logo"
+    /> Buffalo beer
+    </Navbar.Brand>
     <Navbar.Toggle aria-controls="offcanvasNavbar" />
     <Navbar.Offcanvas
       id="offcanvasNavbar"
@@ -14,7 +23,7 @@ const NavBar = () => {
       placement="end"
     >
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title id="offcanvasNavbarLabel">Buffalo</Offcanvas.Title>
+        <Offcanvas.Title id="offcanvasNavbarLabel">Buffalo<CartWidget /></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <Nav className="justify-content-end flex-grow-1 pe-3">
